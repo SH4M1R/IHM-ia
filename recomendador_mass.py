@@ -25,6 +25,9 @@ import implicit
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+# ──────────────────────────────────────────────
+# CONFIGURACIÓN
+# ──────────────────────────────────────────────
 MARKET_BASKET_CSV    = "market_basket.csv"
 HISTORIAL_CSV        = "historial_usuario.csv"
 MODELS_DIR           = "modelos"
@@ -38,12 +41,28 @@ TOP_N                = 5      # Cuántas recomendaciones devolver
 os.makedirs(MODELS_DIR, exist_ok=True)
 
 
+# ══════════════════════════════════════════════
+# 1. MARKET BASKET — Productos que van juntos
+# ══════════════════════════════════════════════
 def entrenar_market_basket(df: pd.DataFrame):
     """
     Usa Apriori para encontrar asociaciones entre productos.
     Input: df con columnas [idVenta, idProducto, nombreProducto]
     """
     print("\n[1/2] Entrenando Market Basket (Apriori)...")
+
+    # Normalizar nombres: minúsculas y sin espacios extra
+    df["nombreProducto"] = df["nombreProducto"].str.strip().str.lower()
+
+    # Guardar mapa nombre_normalizado → { idProducto, precio, nombreOriginal }
+    mapa = {}
+    for _, row in df[["nombreProducto", "idProducto", "precio"]].drop_duplicates("nombreProducto").iterrows():
+        mapa[row["nombreProducto"]] = {
+            "idProducto": int(row["idProducto"]),
+            "precio": float(row["precio"]),
+        }
+    joblib.dump(mapa, f"{MODELS_DIR}/mapa_productos.pkl")
+    print(f"  ✓ Mapa de {len(mapa)} productos guardado.")
 
     # Construir canasta: cada venta es una lista de productos
     canastas = df.groupby("idVenta")["nombreProducto"].apply(list).tolist()
@@ -72,25 +91,32 @@ def entrenar_market_basket(df: pd.DataFrame):
 def recomendar_productos_juntos(productos_en_carrito: list, reglas: pd.DataFrame, top_n=TOP_N) -> list:
     """
     Dado una lista de nombres de productos en el carrito,
-    devuelve productos recomendados para agregar.
+    devuelve productos recomendados con idProducto y precio.
     """
     if reglas is None or reglas.empty:
         return []
 
-    recomendaciones = {}
-    set_carrito = set(productos_en_carrito)
+    # Cargar mapa nombre → idProducto/precio
+    mapa_path = f"{MODELS_DIR}/mapa_productos.pkl"
+    mapa = joblib.load(mapa_path) if os.path.exists(mapa_path) else {}
 
+    # Normalizar nombres del carrito
+    set_carrito = set(p.strip().lower() for p in productos_en_carrito)
+
+    recomendaciones = {}
     for _, row in reglas.iterrows():
         antecedentes = set(row["antecedents"])
         consecuentes = set(row["consequents"])
 
-        # Si algún producto del carrito coincide con los antecedentes
         if antecedentes.issubset(set_carrito) or antecedentes & set_carrito:
             for prod in consecuentes:
                 if prod not in set_carrito:
                     if prod not in recomendaciones or recomendaciones[prod]["lift"] < row["lift"]:
+                        info = mapa.get(prod, {})
                         recomendaciones[prod] = {
                             "producto": prod,
+                            "idProducto": info.get("idProducto", None),
+                            "precio": info.get("precio", None),
                             "confianza": round(row["confidence"], 3),
                             "lift": round(row["lift"], 3),
                             "soporte": round(row["support"], 3),
@@ -100,6 +126,9 @@ def recomendar_productos_juntos(productos_en_carrito: list, reglas: pd.DataFrame
     return ordenados[:top_n]
 
 
+# ══════════════════════════════════════════════
+# 2. FILTRADO COLABORATIVO — Preferencias por usuario
+# ══════════════════════════════════════════════
 def entrenar_colaborativo(df: pd.DataFrame):
     """
     Usa ALS (Alternating Least Squares) implícito para aprender
@@ -186,6 +215,9 @@ def recomendar_para_usuario(id_usuario: str, artefactos: dict, top_n=TOP_N) -> l
     return resultados
 
 
+# ══════════════════════════════════════════════
+# 3. API FLASK — Expone los modelos al backend
+# ══════════════════════════════════════════════
 def crear_api(reglas, artefactos_colaborativo):
     app = Flask(__name__)
     CORS(app)  # Permite llamadas desde Spring Boot / Next.js
@@ -196,7 +228,14 @@ def crear_api(reglas, artefactos_colaborativo):
 
     @app.route("/recomendar/carrito", methods=["POST"])
     def recomendar_carrito():
-        body = request.get_json(force=True, silent=True) or {}
+        """
+        Body esperado:
+        {
+            "productosEnCarrito": ["Lata Leche Gloria", "Fideos Bells 500g"],
+            "idUsuario": "4"  (opcional, para combinar ambos modelos)
+        }
+        """
+        body = request.get_json()
         productos_carrito = body.get("productosEnCarrito", [])
         id_usuario = str(body.get("idUsuario", ""))
 
@@ -247,6 +286,9 @@ def crear_api(reglas, artefactos_colaborativo):
     return app
 
 
+# ══════════════════════════════════════════════
+# 4. MAIN
+# ══════════════════════════════════════════════
 if __name__ == "__main__":
     print("=" * 50)
     print("  Recomendador Tienda Mass — Iniciando")
@@ -261,8 +303,8 @@ if __name__ == "__main__":
     df_basket    = pd.read_csv(MARKET_BASKET_CSV)
     df_historial = pd.read_csv(HISTORIAL_CSV)
 
-    print(f"\n📦 Market basket: {len(df_basket)} filas, {df_basket['idVenta'].nunique()} ventas únicas")
-    print(f"👤 Historial: {len(df_historial)} filas, {df_historial['idUsuario'].nunique()} usuarios únicos")
+    print(f"\nMarket basket: {len(df_basket)} filas, {df_basket['idVenta'].nunique()} ventas únicas")
+    print(f"Historial: {len(df_historial)} filas, {df_historial['idUsuario'].nunique()} usuarios únicos")
 
     # ── Entrenar ──
     reglas = None
@@ -279,6 +321,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"  ⚠ Error en Colaborativo: {e}")
 
+    # ── Levantar API ──
     print("\n Modelos listos. Levantando API en http://localhost:5001")
     print("   Endpoints disponibles:")
     print("   POST /recomendar/carrito")

@@ -255,3 +255,34 @@ idVenta,idProducto,nombreProducto,categoria,precio
 63,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
 63,32,"Hielo 3kg","Bebidas",6.50
 63,10,"Coca Cola 1.5L","Bebidas",8.00
+64,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+65,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+66,36,"Piqueo Snacks 190g","Snacks",12.00
+66,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00
+66,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00
+66,33,"Frugos Durazno 970ml","Bebidas",4.00
+66,32,"Hielo 3kg","Bebidas",6.50
+66,10,"Coca Cola 1.5L","Bebidas",8.00
+66,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+67,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+67,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+68,4,"Galleta Oreo Pack x6","Dulces",6.00
+68,26,"Chocman Pack 6 unid","Dulces",6.00
+68,27,"Galleta Casino Pack 6 unid","Dulces",6.00
+68,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00
+69,10,"Coca Cola 1.5L","Bebidas",8.00
+69,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+70,7,"H&S Shampoo 250ml","Higiene",10.00
+70,21,"H&S Shampoo 375ml","Higiene",18.00
+70,22,"H&S Acondicionador 300ml","Higiene",20.00
+70,23,"Jabon Antibacterial Protex","Higiene",4.50
+71,7,"H&S Shampoo 250ml","Higiene",10.00
+71,21,"H&S Shampoo 375ml","Higiene",18.00
+71,23,"Jabon Antibacterial Protex","Higiene",4.50
+71,22,"H&S Acondicionador 300ml","Higiene",20.00
+72,18,"Azucar Bells 5kg","Abarrotes",15.00
+72,2,"Fideos Bells 500g","Abarrotes",5.00
+72,6,"Arroz Costeño 5kg","Abarrotes",21.00
+72,13,"Aceite Primor 900ml","Abarrotes",9.50
+73,10,"Coca Cola 1.5L","Bebidas",8.00
+73,32,"Hielo 3kg","Bebidas",6.50
