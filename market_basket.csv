@@ -1,0 +1,257 @@
+idVenta,idProducto,nombreProducto,categoria,precio
+1,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+1,2,"Fideos Bells 500g","Abarrotes",5.00
+2,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+2,2,"Fideos Bells 500g","Abarrotes",5.00
+2,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+2,4,"Galleta Oreo Pack x6","Dulces",6.00
+3,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+3,2,"Fideos Bells 500g","Abarrotes",5.00
+3,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+3,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+3,6,"Arroz Costeño 5kg","Abarrotes",21.00
+3,7,"H&S Shampoo 250ml","Higiene",10.00
+3,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+4,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+4,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+4,6,"Arroz Costeño 5kg","Abarrotes",21.00
+5,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+5,2,"Fideos Bells 500g","Abarrotes",5.00
+5,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+5,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+5,6,"Arroz Costeño 5kg","Abarrotes",21.00
+5,7,"H&S Shampoo 250ml","Higiene",10.00
+5,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+5,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+6,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+6,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50
+6,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50
+6,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00
+6,17,"Manjar Gloria 200g","Abarrotes",5.00
+6,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00
+7,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+7,40,"Café Altomayo 175g","Abarrotes",30.00
+8,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+8,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00
+8,6,"Arroz Costeño 5kg","Abarrotes",21.00
+8,18,"Azucar Bells 5kg","Abarrotes",15.00
+9,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+9,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+10,10,"Coca Cola 1.5L","Bebidas",8.00
+10,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+10,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00
+10,32,"Hielo 3kg","Bebidas",6.50
+11,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+11,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+11,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+11,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00
+11,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00
+11,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00
+11,32,"Hielo 3kg","Bebidas",6.50
+12,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+12,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+13,10,"Coca Cola 1.5L","Bebidas",8.00
+13,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+13,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00
+13,32,"Hielo 3kg","Bebidas",6.50
+13,31,"Sporade 500ml","Bebidas",2.50
+14,4,"Galleta Oreo Pack x6","Dulces",6.00
+14,26,"Chocman Pack 6 unid","Dulces",6.00
+14,27,"Galleta Casino Pack 6 unid","Dulces",6.00
+14,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00
+15,36,"Piqueo Snacks 190g","Snacks",12.00
+15,37,"Doritos 140g","Snacks",10.00
+16,7,"H&S Shampoo 250ml","Higiene",10.00
+16,22,"H&S Acondicionador 300ml","Higiene",20.00
+16,23,"Jabon Antibacterial Protex","Higiene",4.50
+17,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+17,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+18,24,"Piel Clásico 3 unid","Preservativos",4.50
+18,25,"Piel Retardante 3 unid","Preservativos",5.50
+18,31,"Sporade 500ml","Bebidas",2.50
+19,24,"Piel Clásico 3 unid","Preservativos",4.50
+19,31,"Sporade 500ml","Bebidas",2.50
+20,7,"H&S Shampoo 250ml","Higiene",10.00
+20,23,"Jabon Antibacterial Protex","Higiene",4.50
+21,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+21,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+21,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+21,10,"Coca Cola 1.5L","Bebidas",8.00
+22,4,"Galleta Oreo Pack x6","Dulces",6.00
+22,26,"Chocman Pack 6 unid","Dulces",6.00
+22,27,"Galleta Casino Pack 6 unid","Dulces",6.00
+22,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00
+23,6,"Arroz Costeño 5kg","Abarrotes",21.00
+23,13,"Aceite Primor 900ml","Abarrotes",9.50
+23,18,"Azucar Bells 5kg","Abarrotes",15.00
+24,2,"Fideos Bells 500g","Abarrotes",5.00
+24,6,"Arroz Costeño 5kg","Abarrotes",21.00
+24,18,"Azucar Bells 5kg","Abarrotes",15.00
+24,13,"Aceite Primor 900ml","Abarrotes",9.50
+25,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+25,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00
+26,29,"Agua Ciel 5L","Bebidas",4.00
+26,30,"Agua Ciel 1L","Bebidas",1.50
+26,32,"Hielo 3kg","Bebidas",6.50
+27,32,"Hielo 3kg","Bebidas",6.50
+27,33,"Frugos Durazno 970ml","Bebidas",4.00
+27,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+27,10,"Coca Cola 1.5L","Bebidas",8.00
+27,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+27,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00
+27,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00
+27,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00
+28,40,"Café Altomayo 175g","Abarrotes",30.00
+28,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+29,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+29,40,"Café Altomayo 175g","Abarrotes",30.00
+29,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50
+29,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50
+30,4,"Galleta Oreo Pack x6","Dulces",6.00
+30,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+30,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00
+30,40,"Café Altomayo 175g","Abarrotes",30.00
+31,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00
+31,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00
+31,38,"Papas Precocidas 1kg","Abarrotes",10.00
+32,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00
+32,38,"Papas Precocidas 1kg","Abarrotes",10.00
+32,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00
+33,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00
+33,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00
+33,38,"Papas Precocidas 1kg","Abarrotes",10.00
+34,21,"H&S Shampoo 375ml","Higiene",18.00
+34,22,"H&S Acondicionador 300ml","Higiene",20.00
+34,23,"Jabon Antibacterial Protex","Higiene",4.50
+34,7,"H&S Shampoo 250ml","Higiene",10.00
+35,25,"Piel Retardante 3 unid","Preservativos",5.50
+35,24,"Piel Clásico 3 unid","Preservativos",4.50
+35,31,"Sporade 500ml","Bebidas",2.50
+36,24,"Piel Clásico 3 unid","Preservativos",4.50
+36,25,"Piel Retardante 3 unid","Preservativos",5.50
+36,30,"Agua Ciel 1L","Bebidas",1.50
+36,31,"Sporade 500ml","Bebidas",2.50
+37,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+37,10,"Coca Cola 1.5L","Bebidas",8.00
+38,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+38,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+39,13,"Aceite Primor 900ml","Abarrotes",9.50
+39,6,"Arroz Costeño 5kg","Abarrotes",21.00
+39,18,"Azucar Bells 5kg","Abarrotes",15.00
+39,2,"Fideos Bells 500g","Abarrotes",5.00
+39,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+40,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+40,2,"Fideos Bells 500g","Abarrotes",5.00
+40,13,"Aceite Primor 900ml","Abarrotes",9.50
+40,6,"Arroz Costeño 5kg","Abarrotes",21.00
+40,18,"Azucar Bells 5kg","Abarrotes",15.00
+41,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+41,2,"Fideos Bells 500g","Abarrotes",5.00
+41,13,"Aceite Primor 900ml","Abarrotes",9.50
+41,6,"Arroz Costeño 5kg","Abarrotes",21.00
+41,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50
+41,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50
+41,18,"Azucar Bells 5kg","Abarrotes",15.00
+42,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+42,2,"Fideos Bells 500g","Abarrotes",5.00
+42,6,"Arroz Costeño 5kg","Abarrotes",21.00
+42,13,"Aceite Primor 900ml","Abarrotes",9.50
+42,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50
+42,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50
+42,17,"Manjar Gloria 200g","Abarrotes",5.00
+42,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00
+42,18,"Azucar Bells 5kg","Abarrotes",15.00
+43,1,"Lata Leche Gloria 390ml","Abarrotes",4.00
+43,2,"Fideos Bells 500g","Abarrotes",5.00
+43,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+43,4,"Galleta Oreo Pack x6","Dulces",6.00
+43,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+43,6,"Arroz Costeño 5kg","Abarrotes",21.00
+43,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+43,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+43,10,"Coca Cola 1.5L","Bebidas",8.00
+43,7,"H&S Shampoo 250ml","Higiene",10.00
+43,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+43,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00
+43,13,"Aceite Primor 900ml","Abarrotes",9.50
+43,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50
+43,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50
+43,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00
+43,17,"Manjar Gloria 200g","Abarrotes",5.00
+43,18,"Azucar Bells 5kg","Abarrotes",15.00
+43,24,"Piel Clásico 3 unid","Preservativos",4.50
+43,23,"Jabon Antibacterial Protex","Higiene",4.50
+43,22,"H&S Acondicionador 300ml","Higiene",20.00
+43,21,"H&S Shampoo 375ml","Higiene",18.00
+43,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00
+43,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00
+43,25,"Piel Retardante 3 unid","Preservativos",5.50
+43,26,"Chocman Pack 6 unid","Dulces",6.00
+43,27,"Galleta Casino Pack 6 unid","Dulces",6.00
+43,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00
+43,29,"Agua Ciel 5L","Bebidas",4.00
+43,30,"Agua Ciel 1L","Bebidas",1.50
+43,37,"Doritos 140g","Snacks",10.00
+43,31,"Sporade 500ml","Bebidas",2.50
+43,38,"Papas Precocidas 1kg","Abarrotes",10.00
+43,32,"Hielo 3kg","Bebidas",6.50
+43,33,"Frugos Durazno 970ml","Bebidas",4.00
+43,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00
+43,40,"Café Altomayo 175g","Abarrotes",30.00
+43,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00
+43,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00
+43,36,"Piqueo Snacks 190g","Snacks",12.00
+44,10,"Coca Cola 1.5L","Bebidas",8.00
+44,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+45,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+45,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+45,10,"Coca Cola 1.5L","Bebidas",8.00
+45,32,"Hielo 3kg","Bebidas",6.50
+46,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+46,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+46,10,"Coca Cola 1.5L","Bebidas",8.00
+46,32,"Hielo 3kg","Bebidas",6.50
+47,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+47,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+48,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+48,32,"Hielo 3kg","Bebidas",6.50
+48,5,"Gaseosa InkaCola 3L","Bebidas",12.00
+48,10,"Coca Cola 1.5L","Bebidas",8.00
+49,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+49,10,"Coca Cola 1.5L","Bebidas",8.00
+50,3,"Gaseosa CocaCola 1L","Bebidas",6.50
+50,32,"Hielo 3kg","Bebidas",6.50
+50,10,"Coca Cola 1.5L","Bebidas",8.00
+50,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+51,24,"Piel Clásico 3 unid","Preservativos",4.50
+51,31,"Sporade 500ml","Bebidas",2.50
+51,32,"Hielo 3kg","Bebidas",6.50
+51,33,"Frugos Durazno 970ml","Bebidas",4.00
+51,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00
+52,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+52,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+53,4,"Galleta Oreo Pack x6","Dulces",6.00
+53,26,"Chocman Pack 6 unid","Dulces",6.00
+53,27,"Galleta Casino Pack 6 unid","Dulces",6.00
+53,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00
+54,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+55,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+55,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+56,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+56,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+57,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+57,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+58,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+58,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+59,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+59,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+60,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00
+60,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00
+61,10,"Coca Cola 1.5L","Bebidas",8.00
+61,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+62,10,"Coca Cola 1.5L","Bebidas",8.00
+62,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+62,32,"Hielo 3kg","Bebidas",6.50
+63,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00
+63,32,"Hielo 3kg","Bebidas",6.50
+63,10,"Coca Cola 1.5L","Bebidas",8.00

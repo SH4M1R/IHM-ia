@@ -1,0 +1,257 @@
+idUsuario,idVenta,fecha,idProducto,nombreProducto,categoria,precio,cantidad
+4,1,2026-06-18,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,1,2026-06-18,2,"Fideos Bells 500g","Abarrotes",5.00,1
+4,2,2026-06-18,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,2,2026-06-18,2,"Fideos Bells 500g","Abarrotes",5.00,1
+4,2,2026-06-18,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+4,2,2026-06-18,4,"Galleta Oreo Pack x6","Dulces",6.00,1
+4,3,2026-06-18,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,3,2026-06-18,2,"Fideos Bells 500g","Abarrotes",5.00,1
+4,3,2026-06-18,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+4,3,2026-06-18,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+4,3,2026-06-18,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+4,3,2026-06-18,7,"H&S Shampoo 250ml","Higiene",10.00,1
+4,3,2026-06-18,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,4,2026-06-18,3,"Gaseosa CocaCola 1L","Bebidas",6.50,2
+4,4,2026-06-18,5,"Gaseosa InkaCola 3L","Bebidas",12.00,2
+4,4,2026-06-18,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+4,5,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,5,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+4,5,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+4,5,2026-06-23,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+4,5,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+4,5,2026-06-23,7,"H&S Shampoo 250ml","Higiene",10.00,1
+4,5,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,5,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,6,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,6,2026-06-23,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+4,6,2026-06-23,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+4,6,2026-06-23,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+4,6,2026-06-23,17,"Manjar Gloria 200g","Abarrotes",5.00,1
+4,6,2026-06-23,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00,1
+4,7,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,2
+4,7,2026-06-23,40,"Café Altomayo 175g","Abarrotes",30.00,1
+4,8,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,2
+4,8,2026-06-23,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+4,8,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+4,8,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+4,9,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,4
+4,9,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,4
+3,10,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+3,10,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+3,10,2026-06-23,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00,1
+3,10,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+3,11,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+3,11,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+3,11,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+3,11,2026-06-23,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00,1
+3,11,2026-06-23,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00,1
+3,11,2026-06-23,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00,1
+3,11,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+3,12,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+3,12,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+3,13,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,3
+3,13,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+3,13,2026-06-23,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00,1
+3,13,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+3,13,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,1
+3,14,2026-06-23,4,"Galleta Oreo Pack x6","Dulces",6.00,1
+3,14,2026-06-23,26,"Chocman Pack 6 unid","Dulces",6.00,1
+3,14,2026-06-23,27,"Galleta Casino Pack 6 unid","Dulces",6.00,1
+3,14,2026-06-23,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00,1
+3,15,2026-06-23,36,"Piqueo Snacks 190g","Snacks",12.00,2
+3,15,2026-06-23,37,"Doritos 140g","Snacks",10.00,1
+3,16,2026-06-23,7,"H&S Shampoo 250ml","Higiene",10.00,1
+3,16,2026-06-23,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+3,16,2026-06-23,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+3,17,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,5
+3,17,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,6
+3,18,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+3,18,2026-06-23,25,"Piel Retardante 3 unid","Preservativos",5.50,1
+3,18,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,1
+3,19,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,5
+3,19,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,6
+3,20,2026-06-23,7,"H&S Shampoo 250ml","Higiene",10.00,1
+3,20,2026-06-23,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+3,21,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+3,21,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+3,21,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+3,21,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+3,22,2026-06-23,4,"Galleta Oreo Pack x6","Dulces",6.00,4
+3,22,2026-06-23,26,"Chocman Pack 6 unid","Dulces",6.00,4
+3,22,2026-06-23,27,"Galleta Casino Pack 6 unid","Dulces",6.00,4
+3,22,2026-06-23,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00,4
+3,23,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+3,23,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+3,23,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+3,24,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+3,24,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+3,24,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+3,24,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,4
+3,25,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,6
+3,25,2026-06-23,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+3,26,2026-06-23,29,"Agua Ciel 5L","Bebidas",4.00,1
+3,26,2026-06-23,30,"Agua Ciel 1L","Bebidas",1.50,1
+3,26,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+3,27,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+3,27,2026-06-23,33,"Frugos Durazno 970ml","Bebidas",4.00,1
+3,27,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+3,27,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,2
+3,27,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,2
+3,27,2026-06-23,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00,2
+3,27,2026-06-23,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00,1
+3,27,2026-06-23,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00,1
+2,28,2026-06-23,40,"Café Altomayo 175g","Abarrotes",30.00,2
+2,28,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,2
+2,29,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+2,29,2026-06-23,40,"Café Altomayo 175g","Abarrotes",30.00,1
+2,29,2026-06-23,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+2,29,2026-06-23,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+2,30,2026-06-23,4,"Galleta Oreo Pack x6","Dulces",6.00,5
+2,30,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+2,30,2026-06-23,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00,1
+2,30,2026-06-23,40,"Café Altomayo 175g","Abarrotes",30.00,1
+2,31,2026-06-23,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00,1
+2,31,2026-06-23,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00,1
+2,31,2026-06-23,38,"Papas Precocidas 1kg","Abarrotes",10.00,1
+2,32,2026-06-23,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00,1
+2,32,2026-06-23,38,"Papas Precocidas 1kg","Abarrotes",10.00,1
+2,32,2026-06-23,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00,1
+2,33,2026-06-23,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00,2
+2,33,2026-06-23,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00,2
+2,33,2026-06-23,38,"Papas Precocidas 1kg","Abarrotes",10.00,2
+2,34,2026-06-23,21,"H&S Shampoo 375ml","Higiene",18.00,1
+2,34,2026-06-23,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+2,34,2026-06-23,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+2,34,2026-06-23,7,"H&S Shampoo 250ml","Higiene",10.00,1
+2,35,2026-06-23,25,"Piel Retardante 3 unid","Preservativos",5.50,1
+2,35,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+2,35,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,1
+2,36,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,9
+2,36,2026-06-23,25,"Piel Retardante 3 unid","Preservativos",5.50,8
+2,36,2026-06-23,30,"Agua Ciel 1L","Bebidas",1.50,7
+2,36,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,9
+2,37,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+2,37,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+2,38,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+2,38,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,39,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+1,39,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+1,39,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+1,39,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+1,39,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+1,40,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+1,40,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+1,40,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+1,40,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+1,40,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+1,41,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+1,41,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+1,41,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+1,41,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+1,41,2026-06-23,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+1,41,2026-06-23,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+1,41,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+1,42,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+1,42,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+1,42,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+1,42,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+1,42,2026-06-23,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+1,42,2026-06-23,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+1,42,2026-06-23,17,"Manjar Gloria 200g","Abarrotes",5.00,1
+1,42,2026-06-23,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+1,42,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+1,43,2026-06-23,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+1,43,2026-06-23,2,"Fideos Bells 500g","Abarrotes",5.00,1
+1,43,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+1,43,2026-06-23,4,"Galleta Oreo Pack x6","Dulces",6.00,1
+1,43,2026-06-23,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+1,43,2026-06-23,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+1,43,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,43,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,43,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+1,43,2026-06-23,7,"H&S Shampoo 250ml","Higiene",10.00,1
+1,43,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+1,43,2026-06-23,12,"Johnnie Walker RED LABEL 1L","Bebidas Alcoholicas",45.00,1
+1,43,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
+1,43,2026-06-23,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+1,43,2026-06-23,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+1,43,2026-06-23,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+1,43,2026-06-23,17,"Manjar Gloria 200g","Abarrotes",5.00,1
+1,43,2026-06-23,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+1,43,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+1,43,2026-06-23,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+1,43,2026-06-23,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+1,43,2026-06-23,21,"H&S Shampoo 375ml","Higiene",18.00,1
+1,43,2026-06-23,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00,1
+1,43,2026-06-23,19,"Nuggets de Pollo 60 unid","Abarrotes",24.00,1
+1,43,2026-06-23,25,"Piel Retardante 3 unid","Preservativos",5.50,1
+1,43,2026-06-23,26,"Chocman Pack 6 unid","Dulces",6.00,1
+1,43,2026-06-23,27,"Galleta Casino Pack 6 unid","Dulces",6.00,1
+1,43,2026-06-23,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00,1
+1,43,2026-06-23,29,"Agua Ciel 5L","Bebidas",4.00,1
+1,43,2026-06-23,30,"Agua Ciel 1L","Bebidas",1.50,1
+1,43,2026-06-23,37,"Doritos 140g","Snacks",10.00,1
+1,43,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,1
+1,43,2026-06-23,38,"Papas Precocidas 1kg","Abarrotes",10.00,1
+1,43,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+1,43,2026-06-23,33,"Frugos Durazno 970ml","Bebidas",4.00,1
+1,43,2026-06-23,39,"Caja Leche Chocolatada 965ml","Abarrotes",7.00,1
+1,43,2026-06-23,40,"Café Altomayo 175g","Abarrotes",30.00,1
+1,43,2026-06-23,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00,1
+1,43,2026-06-23,35,"Ron Cartavio Blanco 750ml","Bebidas Alcoholicas",25.00,1
+1,43,2026-06-23,36,"Piqueo Snacks 190g","Snacks",12.00,1
+1,44,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,2
+1,44,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+1,45,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+1,45,2026-06-23,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+1,45,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+1,45,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+1,46,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,4
+1,46,2026-06-23,5,"Gaseosa InkaCola 3L","Bebidas",12.00,5
+1,46,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,5
+1,46,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,4
+1,47,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,9
+1,47,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,6
+1,48,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,4
+1,48,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,4
+1,48,2026-06-23,5,"Gaseosa InkaCola 3L","Bebidas",12.00,5
+1,48,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,4
+1,49,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,2
+1,49,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,2
+1,50,2026-06-23,3,"Gaseosa CocaCola 1L","Bebidas",6.50,1
+1,50,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+1,50,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+1,50,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+4,51,2026-06-23,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+4,51,2026-06-23,31,"Sporade 500ml","Bebidas",2.50,1
+4,51,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+4,51,2026-06-23,33,"Frugos Durazno 970ml","Bebidas",4.00,1
+4,51,2026-06-23,34,"Vino Villa Vieja 900ml","Bebidas Alcoholicas",18.00,1
+4,52,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,6
+4,52,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,7
+4,53,2026-06-23,4,"Galleta Oreo Pack x6","Dulces",6.00,6
+4,53,2026-06-23,26,"Chocman Pack 6 unid","Dulces",6.00,6
+4,53,2026-06-23,27,"Galleta Casino Pack 6 unid","Dulces",6.00,8
+4,53,2026-06-23,28,"Galleta Rellenitas Pack 8 unid","Dulces",5.00,7
+4,54,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,11
+4,55,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,6
+4,55,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,6
+4,56,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,56,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,57,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,57,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,58,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,58,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,59,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,59,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,60,2026-06-23,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,60,2026-06-23,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+1,61,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+1,61,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+1,62,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
+1,62,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+1,62,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+1,63,2026-06-23,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+1,63,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+1,63,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
