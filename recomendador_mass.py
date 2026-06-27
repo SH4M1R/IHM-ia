@@ -221,9 +221,8 @@ def ejecutar_entrenamiento_completo():
     """
     global _reglas, _artefactos_colaborativo
 
-    # Descargar CSVs desde Spring Boot
-    df_basket    = descargar_csv_desde_springboot("/api/exportar/market-basket")
-    df_historial = descargar_csv_desde_springboot("/api/exportar/historial-usuario")
+    df_basket    = descargar_csv_desde_springboot("/api/exportar/market-basket/raw")
+    df_historial = descargar_csv_desde_springboot("/api/exportar/historial-usuario/raw")
 
     print(f"\n  Market basket: {len(df_basket)} filas, {df_basket['idVenta'].nunique()} ventas únicas")
     print(f"  Historial: {len(df_historial)} filas, {df_historial['idUsuario'].nunique()} usuarios únicos")
