@@ -286,3 +286,55 @@ idUsuario,idVenta,fecha,idProducto,nombreProducto,categoria,precio,cantidad
 3,72,2026-06-23,13,"Aceite Primor 900ml","Abarrotes",9.50,1
 1,73,2026-06-23,10,"Coca Cola 1.5L","Bebidas",8.00,1
 1,73,2026-06-23,32,"Hielo 3kg","Bebidas",6.50,1
+4,74,2026-06-24,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+4,74,2026-06-24,10,"Coca Cola 1.5L","Bebidas",8.00,1
+4,74,2026-06-24,32,"Hielo 3kg","Bebidas",6.50,1
+4,74,2026-06-24,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+4,75,2026-06-24,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+4,75,2026-06-24,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,2
+4,76,2026-06-24,20,"Hamburguesa de pollo 14 unid","Abarrotes",15.00,1
+4,76,2026-06-24,38,"Papas Precocidas 1kg","Abarrotes",10.00,1
+4,77,2026-06-24,36,"Piqueo Snacks 190g","Snacks",12.00,1
+4,77,2026-06-24,37,"Doritos 140g","Snacks",10.00,1
+4,77,2026-06-24,10,"Coca Cola 1.5L","Bebidas",8.00,1
+2,78,2026-06-24,25,"Piel Retardante 3 unid","Preservativos",5.50,1
+2,78,2026-06-24,24,"Piel Clásico 3 unid","Preservativos",4.50,1
+1,79,2026-06-24,10,"Coca Cola 1.5L","Bebidas",8.00,2
+1,80,2026-06-24,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+1,80,2026-06-24,21,"H&S Shampoo 375ml","Higiene",18.00,1
+1,80,2026-06-24,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+4,81,2026-06-24,2,"Fideos Bells 500g","Abarrotes",5.00,3
+4,81,2026-06-24,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+4,81,2026-06-24,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+4,82,2026-06-24,21,"H&S Shampoo 375ml","Higiene",18.00,1
+4,82,2026-06-24,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+4,83,2026-06-25,40,"Café Altomayo 175g","Abarrotes",30.00,1
+4,83,2026-06-25,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+4,84,2026-06-24,31,"Sporade 500ml","Bebidas",2.50,2
+4,84,2026-06-24,32,"Hielo 3kg","Bebidas",6.50,1
+10,85,2026-06-25,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
+11,86,2026-06-25,10,"Coca Cola 1.5L","Bebidas",8.00,1
+11,86,2026-06-25,11,"Ron Cartavio 750ml","Bebidas Alcoholicas",25.00,1
+11,87,2026-06-25,10,"Coca Cola 1.5L","Bebidas",8.00,1
+11,87,2026-06-25,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+11,87,2026-06-25,36,"Piqueo Snacks 190g","Snacks",12.00,1
+11,87,2026-06-25,37,"Doritos 140g","Snacks",10.00,1
+11,88,2026-06-25,21,"H&S Shampoo 375ml","Higiene",18.00,1
+11,88,2026-06-25,22,"H&S Acondicionador 300ml","Higiene",20.00,1
+11,88,2026-06-25,23,"Jabon Antibacterial Protex","Higiene",4.50,1
+11,89,2026-06-25,2,"Fideos Bells 500g","Abarrotes",5.00,1
+11,89,2026-06-25,6,"Arroz Costeño 5kg","Abarrotes",21.00,1
+11,89,2026-06-25,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+11,89,2026-06-25,13,"Aceite Primor 900ml","Abarrotes",9.50,2
+11,89,2026-06-25,15,"Lata Leche Gloria Infantil 390ml","Abarrotes",4.50,1
+11,89,2026-06-25,14,"Lata Leche Gloria Entera 390ml","Abarrotes",4.50,1
+11,89,2026-06-25,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+11,90,2026-06-25,16,"Lata Leche Condensada Gloria 395ml","Abarrotes",6.00,1
+11,90,2026-06-25,17,"Manjar Gloria 200g","Abarrotes",5.00,1
+11,90,2026-06-25,1,"Lata Leche Gloria 390ml","Abarrotes",4.00,1
+11,90,2026-06-25,18,"Azucar Bells 5kg","Abarrotes",15.00,1
+11,91,2026-06-25,5,"Gaseosa InkaCola 3L","Bebidas",12.00,1
+11,91,2026-06-25,32,"Hielo 3kg","Bebidas",6.50,1
+11,91,2026-06-25,33,"Frugos Durazno 970ml","Bebidas",4.00,1
+11,92,2026-06-25,9,"Spark Mora Lata 473ml","Bebidas Alcoholicas",7.00,1
+11,92,2026-06-25,8,"Spark Manzana Lata 473ml","Bebidas Alcoholicas",7.00,1
