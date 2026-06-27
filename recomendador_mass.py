@@ -1,10 +1,15 @@
 """
 Recomendador de productos - Tienda Mass
 ========================================
-Producción: Render Free
-- Los CSVs se descargan automáticamente desde Spring Boot al llamar /reentrenar
-- Los modelos se guardan en /tmp (efímeros pero suficientes para Free tier)
-- Spring Boot URL se configura via variable de entorno SPRINGBOOT_URL
+Flujo de trabajo:
+  LOCAL:      python recomendador_mass.py  →  entrena con CSVs y guarda en modelos/
+  PRODUCCIÓN: gunicorn carga los .pkl del repo directamente, sin reentrenar
+
+Para actualizar el modelo:
+  1. Actualiza los CSVs localmente
+  2. Corre: python recomendador_mass.py  (reentrena y sobreescribe modelos/)
+  3. Commitea modelos/ y haz push
+  4. Render redeploya automáticamente con los nuevos modelos
 """
 
 import pandas as pd
@@ -24,12 +29,8 @@ from flask_cors import CORS
 # ──────────────────────────────────────────────
 # CONFIGURACIÓN
 # ──────────────────────────────────────────────
-# En Render: configura esta variable de entorno con la URL de tu Spring Boot
-# Ej: https://mass-backend.onrender.com
-SPRINGBOOT_URL = os.environ.get("SPRINGBOOT_URL", "http://localhost:8080")
-
-# En Render Free el filesystem es efímero → usamos /tmp para los modelos
-MODELS_DIR     = os.environ.get("MODELS_DIR", "/tmp/modelos")
+# Carpeta de modelos: en local y en Render apunta al mismo lugar del repo
+MODELS_DIR = os.environ.get("MODELS_DIR", "modelos")
 
 MIN_SUPPORT    = 0.05
 MIN_CONFIDENCE = 0.3
@@ -40,29 +41,9 @@ TOP_N          = 5
 
 os.makedirs(MODELS_DIR, exist_ok=True)
 
-# Estado global de los modelos (en memoria mientras el proceso vive)
-_reglas                 = None
+# Estado global de los modelos
+_reglas                  = None
 _artefactos_colaborativo = None
-
-
-# ══════════════════════════════════════════════
-# 0. DESCARGA DE CSVs DESDE SPRING BOOT
-# ══════════════════════════════════════════════
-def descargar_csv_desde_springboot(endpoint: str) -> pd.DataFrame:
-    """
-    Descarga un CSV desde el endpoint de Spring Boot y lo retorna como DataFrame.
-    endpoint: p.ej. "/api/exportar/market-basket"
-    """
-    url = f"{SPRINGBOOT_URL}{endpoint}"
-    print(f"  → Descargando {url} ...")
-    try:
-        resp = requests.get(url, timeout=60)
-        resp.raise_for_status()
-        df = pd.read_csv(io.StringIO(resp.text))
-        print(f"  ✓ {len(df)} filas descargadas desde {endpoint}")
-        return df
-    except requests.exceptions.RequestException as e:
-        raise RuntimeError(f"No se pudo descargar {url}: {e}")
 
 
 # ══════════════════════════════════════════════
@@ -177,7 +158,6 @@ def entrenar_colaborativo(df: pd.DataFrame):
     }, f"{MODELS_DIR}/colaborativo.pkl")
 
     print(f"  ✓ Modelo ALS entrenado con {n_users} usuarios y {n_prods} productos.")
-    return modelo, matriz, le_user, le_prod, df
 
 
 def recomendar_para_usuario(id_usuario: str, artefactos: dict, top_n=TOP_N) -> list:
@@ -212,38 +192,26 @@ def recomendar_para_usuario(id_usuario: str, artefactos: dict, top_n=TOP_N) -> l
 
 
 # ══════════════════════════════════════════════
-# 3. LÓGICA DE ENTRENAMIENTO COMPLETO
+# 3. CARGA DE MODELOS DESDE DISCO
 # ══════════════════════════════════════════════
-def ejecutar_entrenamiento_completo():
-    """
-    Descarga los CSVs desde Spring Boot y reentrena ambos modelos.
-    Actualiza las variables globales en memoria.
-    """
+def cargar_modelos():
+    """Carga los .pkl entrenados desde la carpeta modelos/."""
     global _reglas, _artefactos_colaborativo
 
-    df_basket    = descargar_csv_desde_springboot("/api/exportar/market-basket/raw")
-    df_historial = descargar_csv_desde_springboot("/api/exportar/historial-usuario/raw")
+    basket_path      = f"{MODELS_DIR}/reglas_basket.pkl"
+    colaborativo_path = f"{MODELS_DIR}/colaborativo.pkl"
 
-    print(f"\n  Market basket: {len(df_basket)} filas, {df_basket['idVenta'].nunique()} ventas únicas")
-    print(f"  Historial: {len(df_historial)} filas, {df_historial['idUsuario'].nunique()} usuarios únicos")
+    if os.path.exists(basket_path):
+        _reglas = pd.read_pickle(basket_path)
+        print(f"  ✓ Market Basket cargado ({len(_reglas)} reglas)")
+    else:
+        print(f"  ⚠ No se encontró {basket_path}")
 
-    # Entrenar
-    errores = []
-
-    try:
-        _reglas = entrenar_market_basket(df_basket)
-    except Exception as e:
-        errores.append(f"Market Basket: {e}")
-        print(f"  ⚠ Error en Market Basket: {e}")
-
-    try:
-        entrenar_colaborativo(df_historial)
-        _artefactos_colaborativo = joblib.load(f"{MODELS_DIR}/colaborativo.pkl")
-    except Exception as e:
-        errores.append(f"Colaborativo: {e}")
-        print(f"  ⚠ Error en Colaborativo: {e}")
-
-    return errores
+    if os.path.exists(colaborativo_path):
+        _artefactos_colaborativo = joblib.load(colaborativo_path)
+        print(f"  ✓ Colaborativo cargado")
+    else:
+        print(f"  ⚠ No se encontró {colaborativo_path}")
 
 
 # ══════════════════════════════════════════════
@@ -291,64 +259,68 @@ def crear_api():
     @app.route("/recomendar/usuario/<id_usuario>", methods=["GET"])
     def recomendar_usuario(id_usuario):
         if not _artefactos_colaborativo:
-            return jsonify({"error": "Modelo colaborativo no disponible. Llama a /reentrenar primero."}), 503
+            return jsonify({"error": "Modelo no disponible"}), 503
         resultados = recomendar_para_usuario(str(id_usuario), _artefactos_colaborativo)
         return jsonify({"recomendaciones": resultados})
-
-    @app.route("/reentrenar", methods=["POST"])
-    def reentrenar():
-        """
-        Descarga los CSVs desde Spring Boot y reentrena los modelos.
-        Llamar desde Spring Boot o manualmente cuando haya nuevos datos.
-        """
-        try:
-            errores = ejecutar_entrenamiento_completo()
-            if errores:
-                return jsonify({
-                    "resultado": "Entrenamiento parcial",
-                    "advertencias": errores
-                }), 207
-            return jsonify({"resultado": "Modelos reentrenados correctamente"})
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
 
     return app
 
 
 # ══════════════════════════════════════════════
-# 5. APP — expuesta a nivel de módulo para gunicorn
+# 5. APP — expuesta para gunicorn
 # ══════════════════════════════════════════════
-app = crear_api()  # gunicorn busca esta variable al importar el módulo
+print("=" * 55)
+print("  Recomendador Tienda Mass — Cargando modelos...")
+print("=" * 55)
+cargar_modelos()
+
+app = crear_api()
 
 
 # ══════════════════════════════════════════════
-# 6. MAIN — solo se ejecuta con `python recomendador_mass.py`
+# 6. MAIN — solo para entrenamiento local
+#    Uso: python recomendador_mass.py
+#    Requiere: market_basket.csv y historial_usuario.csv en la misma carpeta
 # ══════════════════════════════════════════════
 if __name__ == "__main__":
-    print("=" * 55)
-    print("  Recomendador Tienda Mass — Iniciando (Producción)")
-    print("=" * 55)
-    print(f"  Spring Boot URL : {SPRINGBOOT_URL}")
-    print(f"  Modelos dir     : {MODELS_DIR}")
+    import sys
 
-    # Intentar entrenar al arrancar si Spring Boot ya está disponible
-    # Si falla, el servicio igual arranca y se puede llamar a /reentrenar después
-    print("\n  Intentando entrenamiento inicial...")
-    try:
-        errores = ejecutar_entrenamiento_completo()
-        if errores:
-            print(f"  ⚠ Entrenamiento parcial: {errores}")
-        else:
-            print("  ✓ Modelos listos.")
-    except Exception as e:
-        print(f"  ⚠ No se pudo entrenar al arrancar: {e}")
-        print("  → El servicio arranca igual. Llama a POST /reentrenar cuando Spring Boot esté disponible.")
+    MARKET_BASKET_CSV = "market_basket.csv"
+    HISTORIAL_CSV     = "historial_usuario.csv"
 
-    print("\n  Endpoints disponibles:")
-    print("  POST /reentrenar              ← descarga CSVs de Spring Boot y reentrena")
-    print("  POST /recomendar/carrito")
-    print("  GET  /recomendar/usuario/<id>")
-    print("  GET  /salud\n")
+    # Si se pasa "--servidor" solo levanta el servidor sin reentrenar
+    if "--servidor" in sys.argv:
+        print("\n  Modo servidor local (sin reentrenar)")
+    else:
+        # Modo entrenamiento: necesita los CSVs
+        if not os.path.exists(MARKET_BASKET_CSV):
+            print(f"\n  ✗ No se encontró {MARKET_BASKET_CSV}")
+            print("    Coloca los CSVs en la misma carpeta y vuelve a correr.")
+            sys.exit(1)
+        if not os.path.exists(HISTORIAL_CSV):
+            print(f"\n  ✗ No se encontró {HISTORIAL_CSV}")
+            sys.exit(1)
+
+        df_basket    = pd.read_csv(MARKET_BASKET_CSV)
+        df_historial = pd.read_csv(HISTORIAL_CSV)
+
+        print(f"\n  Market basket : {len(df_basket)} filas, {df_basket['idVenta'].nunique()} ventas")
+        print(f"  Historial     : {len(df_historial)} filas, {df_historial['idUsuario'].nunique()} usuarios")
+
+        try:
+            _reglas = entrenar_market_basket(df_basket)
+        except Exception as e:
+            print(f"  ⚠ Error Market Basket: {e}")
+
+        try:
+            entrenar_colaborativo(df_historial)
+            _artefactos_colaborativo = joblib.load(f"{MODELS_DIR}/colaborativo.pkl")
+        except Exception as e:
+            print(f"  ⚠ Error Colaborativo: {e}")
+
+        print("\n  ✓ Modelos guardados en modelos/")
+        print("  → Ahora commitea la carpeta modelos/ y haz push para desplegar en Render.\n")
 
     port = int(os.environ.get("PORT", 5001))
+    print(f"  Servidor en http://localhost:{port}\n")
     app.run(host="0.0.0.0", port=port, debug=False)

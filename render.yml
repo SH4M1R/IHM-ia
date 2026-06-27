@@ -1,3 +1,4 @@
+
 services:
   - type: web
     name: mass-ia-recomendador
@@ -6,9 +7,7 @@ services:
     startCommand: gunicorn recomendador_mass:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
     plan: free
     envVars:
-      - key: SPRINGBOOT_URL
-        value: https://ihm-back-220x.onrender.com
       - key: MODELS_DIR
-        value: /tmp/modelos
+        value: modelos        
       - key: PYTHON_VERSION
         value: 3.11.0

@@ -1,0 +1,9 @@
+# CSVs con datos — solo para uso local, no van al repo
+market_basket.csv
+historial_usuario.csv
+
+# Entornos virtuales
+venv/
+.venv/
+__pycache__/
+*.pyc
