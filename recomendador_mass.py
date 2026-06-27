@@ -317,7 +317,13 @@ def crear_api():
 
 
 # ══════════════════════════════════════════════
-# 5. MAIN
+# 5. APP — expuesta a nivel de módulo para gunicorn
+# ══════════════════════════════════════════════
+app = crear_api()  # gunicorn busca esta variable al importar el módulo
+
+
+# ══════════════════════════════════════════════
+# 6. MAIN — solo se ejecuta con `python recomendador_mass.py`
 # ══════════════════════════════════════════════
 if __name__ == "__main__":
     print("=" * 55)
@@ -346,5 +352,4 @@ if __name__ == "__main__":
     print("  GET  /salud\n")
 
     port = int(os.environ.get("PORT", 5001))
-    app = crear_api()
     app.run(host="0.0.0.0", port=port, debug=False)
